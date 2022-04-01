@@ -58,6 +58,13 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.23.tgz#3b41a6e643589ac6442bdbd7a4a3ded62f33f7da"
   integrity sha512-UxDxWn7dl97rKVeVS61vErvw086aCYhDLyvRQZ5Rk65rZKepaFdm53GeqXaKBuOhED4e9uWq34IC3TdSdJJ2Gw==
 
+"@types/puppeteer@*":
+  version "5.4.5"
+  resolved "https://registry.yarnpkg.com/@types/puppeteer/-/puppeteer-5.4.5.tgz#154e3850a77bfd3967f036680de8ddc88eb3a12b"
+  integrity sha512-lxCjpDEY+DZ66+W3x5Af4oHnEmUXt0HuaRzkBGE2UZiZEp/V1d3StpLPlmNVu/ea091bdNmVPl44lu8Wy/0ZCA==
+  dependencies:
+    "@types/node" "*"
+
 "@types/responselike@*", "@types/responselike@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/responselike/-/responselike-1.0.0.tgz#251f4fe7d154d2bad125abe1b429b23afd262e29"
@@ -1298,6 +1305,16 @@ puppeteer-extra-plugin@^3.2.0:
     debug "^4.1.1"
     merge-deep "^3.0.1"
 
+puppeteer-extra@^3.2.3:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/puppeteer-extra/-/puppeteer-extra-3.2.3.tgz#1b24ae12ab7c7660f81922c1065beb5887cc189e"
+  integrity sha512-CnSN9yIedbAbS8WmRybaDHJLf6goRk+VYM/kbH6i/+EMadCaAeh2O+1/mFUMN2LbkbDNAp2Vd/UwrTVCHjTxyg==
+  dependencies:
+    "@types/debug" "^4.1.0"
+    "@types/puppeteer" "*"
+    debug "^4.1.1"
+    deepmerge "^4.2.2"
+
 puppeteer-proxy@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/puppeteer-proxy/-/puppeteer-proxy-2.1.2.tgz#f5074d2919b6460e3924560d7d534718d1eb667f"
@@ -1311,7 +1328,7 @@ puppeteer-proxy@^2.1.2:
     serialize-error "^7.0.1"
     tough-cookie "^4.0.0"
 
-puppeteer@^13.1.2:
+puppeteer@^13.5.2:
   version "13.5.2"
   resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-13.5.2.tgz#73ae84969cbf514aeee871a05ec4549d67f6abee"
   integrity sha512-DJAyXODBikZ3xPs8C35CtExEw78LZR9RyelGDAs0tX1dERv3OfW7qpQ9VPBgsfz+hG2HiMTO/Tyf7BuMVWsrxg==
