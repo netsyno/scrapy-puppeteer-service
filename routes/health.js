@@ -5,6 +5,7 @@ const router = express.Router();
 async function action(page, request) {
   await page.goto(request.body.url);
   const response = await utils.formResponse(page, true);
+  const browser = req.app.get("browser");
   await utils.closeContexts(browser, [response.contextId]);
   return response;
 }
