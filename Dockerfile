@@ -1,4 +1,4 @@
-FROM node:17.9.0-buster
+FROM node:10.16.3
 
 RUN apt-get update && \
     apt-get -y install xvfb gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 \
@@ -9,10 +9,12 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /app
-COPY . /app/
-WORKDIR /app
+COPY package.json /app/
 ENV NODE_PATH=/app/node_modules
-RUN npm install
+RUN cd /app && npm install
+
+WORKDIR /app
+COPY . /app
 
 # Add user so we don't need --no-sandbox.
 RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
