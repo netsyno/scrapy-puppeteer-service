@@ -17,6 +17,8 @@ const screenshotRouter = require("./routes/screenshot");
 const mhtmlRouter = require("./routes/mhtml");
 const harRouter = require("./routes/har");
 const closeContextRouter = require("./routes/close_context");
+const healthRouter = require("./routes/health");
+const specialRouter = require("./routes/special");
 
 puppeteer.use(StealthPlugin());
 
@@ -58,5 +60,7 @@ app.use("/screenshot", screenshotRouter);
 app.use("/mhtml", mhtmlRouter);
 app.use("/har", harRouter);
 app.use("/close_context", closeContextRouter);
+app.use("/health", healthRouter);
+app.use("/special", specialRouter);
 
 module.exports = app;
