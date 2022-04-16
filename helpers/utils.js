@@ -68,8 +68,8 @@ async function newPage(context, onlyHTML) {
 
   // This is request interception in order to make request through proxies
   page.on("request", async (request) => {
-    if (onlyHTML && req.resourceType() !== "document") {
-      return req.abort();
+    if (onlyHTML && request.resourceType() !== "document") {
+      return request.abort();
     }
     const { [PAGE_PROXY_URL_KEY]: proxyUrl } = page;
     if (proxyUrl) {
