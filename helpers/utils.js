@@ -1,4 +1,3 @@
-const { PageEmittedEvents } = require("puppeteer");
 const { proxyRequest } = require("puppeteer-proxy");
 const PAGE_PROXY_URL_KEY = "puppeteer-service-proxy-url";
 
@@ -68,7 +67,7 @@ async function newPage(context, onlyHTML) {
   await page.setRequestInterception(true);
 
   // This is request interception in order to make request through proxies
-  page.on(PageEmittedEvents.Request, async (request) => {
+  page.on("request", async (request) => {
     if (onlyHTML && req.resourceType() !== "document") {
       return req.abort();
     }
