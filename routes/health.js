@@ -9,7 +9,7 @@ async function action(page, request) {
   return response;
 }
 
-router.post("/", async function (req, res, next) {
+router.get("/", async function (req, res, next) {
   try {
     let response = await utils.performAction(
       {
