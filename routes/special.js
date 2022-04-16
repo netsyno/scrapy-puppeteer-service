@@ -9,7 +9,7 @@ async function action(page, request) {
     request.query.closePage,
     request.body.waitOptions
   );
-  const browser = req.app.get("browser");
+  const browser = request.app.get("browser");
   await utils.closeContexts(browser, [response.contextId]);
   return response;
 }
