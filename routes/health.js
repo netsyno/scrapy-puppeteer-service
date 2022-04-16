@@ -14,6 +14,7 @@ router.get("/", async function (req, res, next) {
   try {
     let response = await utils.performAction(
       {
+        app: req.app,
         query: { onlyHTML: 1 },
         body: { url: "https://google.com" },
       },
