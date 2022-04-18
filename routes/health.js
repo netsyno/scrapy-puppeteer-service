@@ -16,7 +16,7 @@ router.get("/", async function (req, res, next) {
       {
         app: req.app,
         query: { onlyHTML: 1 },
-        body: { url: "https://google.com" },
+        body: { url: "http://jobservice/api/health/" },
       },
       action
     );
